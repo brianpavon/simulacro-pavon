@@ -1,1 +1,42 @@
-<p>busqueda works!</p>
+<main role="main">
+  
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-3">Listado de Películas</h1>
+        <div class="table-responsive">                
+            <app-tabla-pelicula [listaDePeliculas]="pelisFirestore" (peliculaSeleccionada)="peliculaParaDetalle($event)"></app-tabla-pelicula>
+        </div>
+        <!--<p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>-->
+        <p><a class="btn btn-primary btn-lg" routerLink="/pelicula/alta" role="button">Nueva Película &raquo;</a></p>
+      </div>
+    </div>
+  
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Para Borrar</h2>
+          <p>Aqui van los controles necesarios segun la entidad y funcionalidad requerida.</p>
+          <p><a class="btn btn-secondary" href="" role="button">Borrar</a></p>
+        </div>
+        <div class="col-md-4" *ngIf="mostrarDetalle">
+          <h2>Detalle de Película</h2>
+                              
+            <app-detalle-pelicula [peliSeleccionada]="peliculaParaMostrar"></app-detalle-pelicula>          
+          <p><a class="btn btn-secondary" (click)="limpiarDetalle()" role="button">Limpiar</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Modificar</h2>
+          <p>Aqui van los controles necesarios segun la entidad y funcionalidad requerida.</p>
+          <p><a class="btn btn-secondary" href="" role="button">Guardar Cambios</a></p>
+        </div>
+      </div>
+  
+      <hr>
+  
+    </div> <!-- /container -->
+  
+  </main>  
+
+  

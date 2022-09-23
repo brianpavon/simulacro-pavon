@@ -1,0 +1,21 @@
+<table class="table table-bordered text-center">
+    <thead class="thead-dark">
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Tipo</th>
+        <th>Fecha de Estreno</th>
+        <th>Cantidad de Público</th>
+        <th>Foto de la Película</th>
+    </thead>
+    <tbody>
+        <tr class="trPointer" *ngFor="let peli of listaDePeliculas" (click)="mostrarDetalles(peli)">
+            <td class="align-middle">{{ peli.id }}</td>
+            <td class="align-middle">{{ peli.nombre }}</td>
+            <td class="align-middle">{{ peli.tipo }}</td>
+            <td class="align-middle">{{ peli.fechaDeEstreno }}</td>
+            <td class="align-middle">{{ peli.cantidadDePublico }}</td>
+            <td> <img src="{{ peli.fotoDePelicula }}" alt="{{ peli.nombre }}" width="50%" height="50%"></td>
+        </tr>
+    </tbody>
+</table>
+
