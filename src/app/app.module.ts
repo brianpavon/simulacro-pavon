@@ -16,13 +16,15 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { PeliculasModule } from './modules/peliculas/peliculas.module';
 import { ActoresModule } from './modules/actores/actores.module';
+//import { TablaPaisesComponent } from './pages/tabla-paises/tabla-paises.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BusquedaComponent,
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    //TablaPaisesComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,7 @@ import { ActoresModule } from './modules/actores/actores.module';
     AngularFireStorageModule,
     PeliculasModule,
     ActoresModule
-  ],
+  ],  
   providers: [],
   bootstrap: [AppComponent]
 })

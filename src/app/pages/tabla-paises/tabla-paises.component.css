@@ -1,0 +1,12 @@
+img{
+    width: 4rem;
+}
+
+.ulPaises{
+    height: 50vh !important;
+    overflow-y: scroll !important;    
+}
+
+.ulPaises li{
+    cursor: pointer;
+}

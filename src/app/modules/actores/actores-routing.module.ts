@@ -4,11 +4,8 @@ import { ActorAltaComponent } from './actor-alta/actor-alta.component';
 import { ActorListadoComponent } from './actor-listado/actor-listado.component';
 
 const routes: Routes = [
-  {path:'listado',component:ActorListadoComponent,
-    children:[
-      {path:'alta',component:ActorAltaComponent}
-    ]
-  }
+  {path:'listado',component:ActorListadoComponent},    
+  {path:'alta',component:ActorAltaComponent}
 ];
 
 @NgModule({

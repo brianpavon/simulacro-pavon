@@ -1,1 +1,64 @@
-<p>actor-alta works!</p>
+<div style="margin: 4%;">
+    <div class="container ">
+      <div class="py-5 text-center">
+        <!--<img class="d-block mx-auto mb-4" src="../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">-->
+        <h2>Nuevo Actor</h2>
+        <p class="lead">Complete los datos del actor.</p>
+      </div>
+      <div class="row">
+        <div class="col-md-4 order-md-2 mb-4">
+        
+          <app-tabla-paises (paisSeleccionado)="cargarPais($event)"></app-tabla-paises>        
+        </div>
+        <div class="col-md-8 order-md-1">
+          <h4 class="mb-3">Datos del actor</h4>
+          <form [formGroup]="formularioActor" (ngSubmit)="altaActor()" class="needs-validation">
+            <div class="row">
+              
+              <div class="col-md-6 mb-3">
+                <label for="lastName">Apellido</label>
+                <input type="text" class="form-control" id="apellido" placeholder="Ingrese el apellido" formControlName="apellido" required/>
+                <div class="invalid" *ngIf="formularioActor.controls.apellido.errors?.required && formularioActor.controls.apellido.touched">
+                  El apellido es requerido.
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Ingrese el Nombre" formControlName="nombre" required/>
+                <div class="invalid" *ngIf="formularioActor.controls.nombre.errors?.required && formularioActor.controls.nombre.touched">
+                  El nombre es requerido.
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Edad</label>
+                <input type="number" class="form-control" id="edad" placeholder="Ingrese la edad" formControlName="edad" required/>
+                <div class="invalid" *ngIf="formularioActor.controls.edad.errors?.required && formularioActor.controls.edad.touched">
+                  Debe ingresar una edad.
+                </div>
+                <div class="invalid" *ngIf="formularioActor.controls.edad.errors?.min || formularioActor.controls.edad.errors?.max && formularioActor.controls.edad.touched">
+                  El rango de edad no es válido.
+                </div>
+              </div>
+              <div class="col-md-6 mb-3" *ngIf="eligioPais">
+                <label for="lastName">Nacionalidad</label>
+                <input type="text" class="form-control" id="nacionalidad" placeholder="" formControlName="nacionalidad" required/>
+                <div class="invalid" *ngIf="formularioActor.controls.nacionalidad.errors?.required && formularioActor.controls.nacionalidad.touched">
+                  Debe elegir un país.
+                </div>
+              </div>
+              <div class="col-md-6 mb-3" *ngIf="!eligioPais">
+                <div class="invalid">
+                  Seleccione un país de la lista de la derecha.
+                </div>
+              </div>
+            </div>
+            
+            <hr class="mb-4">
+            <button class="btn btn-primary btn-lg" type="submit" [disabled]="formularioActor.invalid">Crear Actor</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
