@@ -4,11 +4,8 @@ import { PeliculaAltaComponent } from './pelicula-alta/pelicula-alta.component';
 import { PeliculaListadoComponent } from './pelicula-listado/pelicula-listado.component';
 
 const routes: Routes = [
-  {path:'listado',component:PeliculaListadoComponent,
-    children:[
-      {path:'alta',component:PeliculaAltaComponent}
-    ]
-  }
+  {path:'listado',component:PeliculaListadoComponent},
+  {path:'alta',component:PeliculaAltaComponent}
 ];
 
 @NgModule({

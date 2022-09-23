@@ -6,6 +6,9 @@ import { PeliculaAltaComponent } from './pelicula-alta/pelicula-alta.component';
 import { PeliculaListadoComponent } from './pelicula-listado/pelicula-listado.component';
 import { TablaPeliculaComponent } from './tabla-pelicula/tabla-pelicula.component';
 import { DetallePeliculaComponent } from './detalle-pelicula/detalle-pelicula.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TablaActorComponent } from '../actores/tabla-actor/tabla-actor.component';
+import { ActoresModule } from '../actores/actores.module';
 
 
 @NgModule({
@@ -13,11 +16,14 @@ import { DetallePeliculaComponent } from './detalle-pelicula/detalle-pelicula.co
     PeliculaAltaComponent,
     PeliculaListadoComponent,
     TablaPeliculaComponent,
-    DetallePeliculaComponent
+    DetallePeliculaComponent    
   ],
   imports: [
     CommonModule,
-    PeliculasRoutingModule
+    PeliculasRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ActoresModule
   ],
   exports:[
     PeliculaAltaComponent,

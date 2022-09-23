@@ -7,7 +7,7 @@ import { BusquedaComponent } from './pages/busqueda/busqueda.component';
 const routes: Routes = [
   {path:'busqueda',component:BusquedaComponent},
   {path:'bienvenido',redirectTo: 'busqueda',pathMatch:'full'},
-  {path:'peliculas',
+  {path:'pelicula',
     loadChildren:()=>import('./modules/peliculas/peliculas.module').then(m=>PeliculasModule)
   },
   {path:'actor',

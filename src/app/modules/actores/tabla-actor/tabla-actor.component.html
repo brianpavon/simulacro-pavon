@@ -1,0 +1,11 @@
+<h4 class="d-flex justify-content-between align-items-center mb-3">
+    <span class="text-muted">Elija el actor</span>    
+  </h4>
+  <ul class="list-group mb-3 ulActores">
+    <li class="list-group-item d-flex justify-content-between lh-condensed bg-light" *ngFor="let actor of listaActores" (click)="enviarActor(actor)">
+        <div>
+            <h6 class="my-0"> {{ actor.nombre }} {{ actor.apellido }}</h6>        
+        </div>
+    </li>
+    
+  </ul>

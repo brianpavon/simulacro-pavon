@@ -6,13 +6,15 @@ import { ActorAltaComponent } from './actor-alta/actor-alta.component';
 import { ActorListadoComponent } from './actor-listado/actor-listado.component';
 import { TablaPaisesComponent } from 'src/app/pages/tabla-paises/tabla-paises.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TablaActorComponent } from './tabla-actor/tabla-actor.component';
 
 
 @NgModule({
   declarations: [
     ActorAltaComponent,
     ActorListadoComponent,
-    TablaPaisesComponent
+    TablaPaisesComponent,
+    TablaActorComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +25,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   exports:[
     ActorAltaComponent,
-    ActorListadoComponent
+    ActorListadoComponent,
+    TablaActorComponent
   ]
 })
 export class ActoresModule { }
