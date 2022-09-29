@@ -8,6 +8,7 @@ import { TablaPaisesComponent } from 'src/app/pages/tabla-paises/tabla-paises.co
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TablaActorComponent } from './tabla-actor/tabla-actor.component';
 import { ActorPeliculaComponent } from './actor-pelicula/actor-pelicula.component';
+import { ActorTablaComponent } from './actor-tabla/actor-tabla.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ActorPeliculaComponent } from './actor-pelicula/actor-pelicula.componen
     ActorListadoComponent,
     TablaPaisesComponent,
     TablaActorComponent,
-    ActorPeliculaComponent
+    ActorPeliculaComponent,
+    ActorTablaComponent
   ],
   imports: [
     CommonModule,

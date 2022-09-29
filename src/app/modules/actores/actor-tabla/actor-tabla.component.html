@@ -1,0 +1,24 @@
+<table class="table table-bordered text-center">
+    <thead class="thead-dark">
+        <th>Apellido</th>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>Nacionalidad</th> 
+        <th></th>
+        <th></th>
+        <th></th>       
+    </thead>
+    <tbody>
+        <tr class="trPointer" *ngFor="let actor of listaActores">
+            <td class="align-middle">{{ actor.apellido }}</td>
+            <td class="align-middle">{{ actor.nombre }}</td>
+            <td class="align-middle">{{ actor.edad }}</td>
+            <td class="align-middle">{{ actor.nacionalidad }}</td>
+            <td><button>Ver peliculas</button></td>
+            <td><button>Detalle del País</button></td>
+            <td><button>Detalle del Actor</button></td>
+        </tr>
+    </tbody>
+</table>
+
+
