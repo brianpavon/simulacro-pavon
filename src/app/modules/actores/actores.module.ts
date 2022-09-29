@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TablaActorComponent } from './tabla-actor/tabla-actor.component';
 import { ActorPeliculaComponent } from './actor-pelicula/actor-pelicula.component';
 import { ActorTablaComponent } from './actor-tabla/actor-tabla.component';
+import { ActorDetalleComponent } from './actor-detalle/actor-detalle.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ActorTablaComponent } from './actor-tabla/actor-tabla.component';
     TablaPaisesComponent,
     TablaActorComponent,
     ActorPeliculaComponent,
-    ActorTablaComponent
+    ActorTablaComponent,
+    ActorDetalleComponent
   ],
   imports: [
     CommonModule,

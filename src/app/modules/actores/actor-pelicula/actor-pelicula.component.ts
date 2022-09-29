@@ -9,6 +9,7 @@ import { ActorServiceService } from '../../services/actor-service.service';
 })
 export class ActorPeliculaComponent implements OnInit {
   actoresFirestore:Actor[] = [];
+  actorParaMostrar !: Actor;  
   constructor(private actServ:ActorServiceService) { }
 
   ngOnInit(): void {
@@ -23,6 +24,10 @@ export class ActorPeliculaComponent implements OnInit {
         
       }
     )
+  }
+
+  mostrarDetalleActor(actor:Actor){
+    this.actorParaMostrar = actor;
   }
 
 }

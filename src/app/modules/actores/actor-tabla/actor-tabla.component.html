@@ -14,9 +14,9 @@
             <td class="align-middle">{{ actor.nombre }}</td>
             <td class="align-middle">{{ actor.edad }}</td>
             <td class="align-middle">{{ actor.nacionalidad }}</td>
-            <td><button>Ver peliculas</button></td>
-            <td><button>Detalle del País</button></td>
-            <td><button>Detalle del Actor</button></td>
+            <td><button type="button" class="btn btn-outline-info">Ver peliculas</button></td>
+            <td><button type="button" class="btn btn-outline-success" >Detalle del País</button></td>
+            <td><button type="button" class="btn btn-outline-warning" (click)="verDetalles(actor)">Detalle del Actor</button></td>
         </tr>
     </tbody>
 </table>

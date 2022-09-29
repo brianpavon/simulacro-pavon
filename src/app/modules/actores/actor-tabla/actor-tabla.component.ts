@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Actor } from 'src/app/modules/class/actores';
 
 @Component({
@@ -8,9 +8,14 @@ import { Actor } from 'src/app/modules/class/actores';
 })
 export class ActorTablaComponent implements OnInit {
   @Input() listaActores: Actor[] = []
+  @Output() actorSeleccionado : EventEmitter<any> = new EventEmitter<any>();
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  verDetalles(actor:Actor){
+    this.actorSeleccionado.emit(actor);
   }
 
 }
