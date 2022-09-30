@@ -11,6 +11,7 @@ export class ActorTablaComponent implements OnInit {
   @Input() listaActores: Actor[] = []
   @Output() actorElegido : EventEmitter<any> = new EventEmitter<any>();
   @Output() paisActor : EventEmitter<any> = new EventEmitter<any>();
+  @Output() peliActor : EventEmitter<any> = new EventEmitter<any>();
   constructor() { }
 
   ngOnInit(): void {
@@ -18,6 +19,10 @@ export class ActorTablaComponent implements OnInit {
 
   verDetallesActor(actor:Actor){
     this.actorElegido.emit(actor);
+  }
+
+  verDetallesPelis(actor:Actor){
+    this.peliActor.emit(actor);
   }
 
   verDetallePais(pais:Paises){    

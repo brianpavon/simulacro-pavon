@@ -11,6 +11,7 @@ import { ActorPeliculaComponent } from './actor-pelicula/actor-pelicula.componen
 import { ActorTablaComponent } from './actor-tabla/actor-tabla.component';
 import { ActorDetalleComponent } from './actor-detalle/actor-detalle.component';
 import { ActorDetallePaisComponent } from './actor-detalle-pais/actor-detalle-pais.component';
+import { ActorDetallePeliculaComponent } from './actor-detalle-pelicula/actor-detalle-pelicula.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ActorDetallePaisComponent } from './actor-detalle-pais/actor-detalle-pa
     ActorPeliculaComponent,
     ActorTablaComponent,
     ActorDetalleComponent,
-    ActorDetallePaisComponent
+    ActorDetallePaisComponent,
+    ActorDetallePeliculaComponent
   ],
   imports: [
     CommonModule,
