@@ -16,6 +16,7 @@ export class ActorAltaComponent implements OnInit {
   listaActores:Actor[] = []
   formularioActor : FormGroup;
   eligioPais:boolean = false;
+  paisActor !: Paises;
 
   constructor(private fb:FormBuilder, private firestore:AngularFirestore, private actorsServices:ActorServiceService) {
     this.formularioActor = this.fb.group({
@@ -32,14 +33,19 @@ export class ActorAltaComponent implements OnInit {
   altaActor(){
     
       //console.log('en el alta');    
-      //console.log(this.formularioActor.value.nacionalidad);
+      //console.log(this.formularioActor.value);
+      //console.log(this.paisActor);
+      this.formularioActor.value.nacionalidad = this.paisActor;
+      //console.log(this.formularioActor.value);
+      
       this.nuevoActor = this.formularioActor.value;      
       this.actorsServices.guardarActor(this.nuevoActor);      
       this.formularioActor.reset();
   }
 
   cargarPais(pais:Paises){
-    //console.log(pais.name.common);
+    //console.log(pais);
+    this.paisActor = pais;
     this.eligioPais= true;
     this.formularioActor.controls.nacionalidad.patchValue(pais.name.common);
   }

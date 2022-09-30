@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Paises } from 'src/app/interfaces/paises';
 import { Actor } from 'src/app/modules/class/actores';
 
 @Component({
@@ -8,14 +9,20 @@ import { Actor } from 'src/app/modules/class/actores';
 })
 export class ActorTablaComponent implements OnInit {
   @Input() listaActores: Actor[] = []
-  @Output() actorSeleccionado : EventEmitter<any> = new EventEmitter<any>();
+  @Output() actorElegido : EventEmitter<any> = new EventEmitter<any>();
+  @Output() paisActor : EventEmitter<any> = new EventEmitter<any>();
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  verDetalles(actor:Actor){
-    this.actorSeleccionado.emit(actor);
+  verDetallesActor(actor:Actor){
+    this.actorElegido.emit(actor);
+  }
+
+  verDetallePais(pais:Paises){    
+    //console.log(pais);
+    this.paisActor.emit(pais);
   }
 
 }

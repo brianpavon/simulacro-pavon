@@ -14,5 +14,9 @@ export class PaisesService {
    todos():Observable<Paises[]>{
      return this.http.get<Paises[]>(this.urlApi);
    }
+
+   traerPais(nombrePais:string):Observable<Paises>{
+    return this.http.get<Paises>(`https://restcountries.com/v3.1/name/${nombrePais}`);
+   }
 }
 

@@ -4,7 +4,7 @@
     <div class="jumbotron">
       <div class="container">
         <h1 class="display-3">Listado de Actores</h1>
-        <app-actor-tabla [listaActores]="actoresFirestore" (actorSeleccionado)="mostrarDetalleActor($event)"></app-actor-tabla>        
+        <app-actor-tabla [listaActores]="actoresFirestore" (actorElegido)="mostrarDetalleActor($event)" (paisActor)="mostrarDetallePais($event)"></app-actor-tabla>        
         <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
       </div>
     </div>
@@ -18,11 +18,16 @@
         </div>
         <div class="col-md-4">
           <h2>Detalle del Pais</h2>
+          <div *ngIf="verPais">
+            <app-actor-detalle-pais [paisDelActor]="paisDelActor"></app-actor-detalle-pais>
+          </div>
           <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
         </div>
         <div class="col-md-4">
           <h2>Detalle del Actor</h2>
-          <app-actor-detalle [actorSeleccionado]="actorParaMostrar"></app-actor-detalle>
+          <div *ngIf="verActor">
+            <app-actor-detalle [actorSeleccionado]="actorParaMostrar"></app-actor-detalle>
+          </div>
           <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
         </div>
       </div>
